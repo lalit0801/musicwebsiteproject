@@ -1,0 +1,48 @@
+{% load static %}
+{% include 'template/userheader.html' %}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<style>
+body{
+background: linear-gradient(red,black,white);
+    color: white;
+    font-size: 15px;
+	}
+label {
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    font-color: white,pink;
+	}
+legend{
+	border-bottom: 0px solid #e5e5e5;
+}
+</style><body>
+<table>
+	<tr>
+		<th>Song</th>
+		<th>Singer</th>	
+		<th>Title</th>	
+		<th>File</th><br>
+		<th>Rating</th>
+		<th>Views</th></br>
+	</tr>
+	
+	{% for x in alldata  %}
+		<tr>
+			<th>{{x.song}}</th>
+			<th>{{x.singer}}</th>	
+			<th>{{x.title}}</th>	
+			<th><audio controls>
+					<source src="{{ x.file.url }}" type="audio/mp3"/>
+				</audio>
+				</th>
+			<th>{{x.rating}}</th>
+			<th>{{x.views}}</th>
+		</tr>
+
+	{% endfor %}	
+</table><br/><br/><br/>
+
+</body>
+
+<br/>
+{% include 'template/userfooter.html' %}

@@ -1,0 +1,44 @@
+{% load static %}
+{% include 'template/header.html' %}
+
+<style>{
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #984a4a;;
+    background-color: red;
+	olor: #984a4a;
+}
+}
+</style>
+<body  style="background:black;">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div class="container" >
+<div class="row">
+<div class="col-md-6">
+	<img src="{% static 'img/Login/2.jpg' %}" height="100%" width="100%"/>
+
+
+</div>
+
+<div class="col-md-6">
+</br></br></br></br></br></br></br></br></br></br>
+<fieldset align="center" height="100" width="50">
+<legend style=""><font color="silver"><b>LOGIN PAGE</b></font> </legend>
+<form action="/logincode/" method="post" >
+{% csrf_token %}
+<label for="U" ><b><font color="silver">Username</b></font></label>
+<input type ="text" name="t1"id="U"/><br/><br/>
+<label for="p" ><b><font color="silver">Password</b></font></label>
+<input type ="Password" name="t2"id="p"/><br/><br/>
+<button><font color="black"/><b/>LOGIN</button>
+</form>
+</fieldset>
+</div>
+</div>
+</div>
+ <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+ </body>
+{% include 'template/footer.html' %}

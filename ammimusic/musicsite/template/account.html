@@ -1,0 +1,60 @@
+{% load static %}
+{% include 'template/userheader.html' %}
+ 
+<style>
+body{
+background: linear-gradient(red,black,white);
+    color: white;
+    font-size: 15px;
+	}
+label {
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    font-color: white,pink;
+	}
+legend{
+	border-bottom: 0px solid #e5e5e5;
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: black;
+}
+}</style>
+
+<!-- contact section start -->  
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<body>    
+		  {% for single in all %} 
+		  <form action="/changepassword1/" method="post">
+			{% csrf_token %}	
+            <center><h1 class="contact_text">Change Password {{ abc }}</h1> </center>
+            <div class="input_main">
+               
+			 <div class="row form-group">
+                <div class="col-md-12 ">
+									<b/><i/>Current Password
+                                   <input type="text" class="email-bt" name="t1" value="{{single.Password}}" disabled="disabled">
+                                   <input type="hidden" class="email-bt" name="t11" value="{{single.Email}}">
+                  
+				
+									
+									<br/><br/>New Password<font color="black"> 
+                                   <input type="password" class="email-bt" name="t2 "></font><font color="Red"/>
+                  
+				<br/><br/>
+			
+							       <button class="send_bt">Change</button>
+				</div>
+				</div>
+			</div>
+		</form>
+{% endfor %}
+		</div>
+    </div>
+</body>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+{% include 'template/userfooter.html' %}

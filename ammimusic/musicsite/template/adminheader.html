@@ -1,0 +1,90 @@
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Musify</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="LivleenKaur">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">	
+		<!-- Animate CSS -->
+		<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+		<!-- Basic stylesheet -->
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<!-- Font awesome CSS -->
+		<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">		
+		<!-- Custom CSS -->
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style-color.css' %}" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}">
+	</head>
+
+<!-- header area -->
+			<header>
+				<!-- secondary menu -->
+				<nav class="secondary-menu">
+					<div class="container">
+						<!-- secondary menu left link area -->
+						<div class="sm-left">
+							<strong>Phone</strong>:&nbsp; <a href="{% static '#' %}">7988856423</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<strong>E-mail</strong>:&nbsp; <a href="{% static '#' %}">music.site@musify.com</a>
+						</div>
+						<!-- secondary menu right link area -->
+						<div class="sm-right">
+							<!-- social link -->
+							<div class="sm-social-link">
+								<a class="h-facebook" href="{% static '#' %}"><i class="fa fa-facebook"></i></a>
+								<a class="h-twitter" href="{% static '#' %}"><i class="fa fa-twitter"></i></a>
+								<a class="h-google" href="{% static '#' %}"><i class="fa fa-google-plus"></i></a>
+								<a class="h-linkedin" href="{% static '#' %}"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</nav>
+				<!-- primary menu -->
+				<nav class="navbar navbar-fixed-top navbar-default">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<!-- logo area -->
+							<a class="navbar-brand" href="#home">
+								<!-- logo image -->
+								<img class="img-responsive" src="{% static 'img/logo/logo.jpg' %}" alt="" />
+							</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+							
+								<li><a href="/home/">Home</a></li>
+								<li><a href="/showcategory/">Show Category</a></li>
+								
+								<li><a href="/addcategory/">Add Category</a></li>
+								<li><a href="/addsongs/">Add Songs</a></li>
+								<li><a href="/showsongs/">Show Songs</a></li>
+								<li><a href="/showuser/">Show User</a></li>
+								<li><a href="/logout/">logout</a></li>
+								
+							
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</header>
+			<!--/ header end -->

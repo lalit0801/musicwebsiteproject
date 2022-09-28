@@ -1,0 +1,54 @@
+{% load static %}
+{% include 'template/adminheader.html' %}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<style>
+body{
+background: linear-gradient(red,black,white);
+    color: white;
+    font-size: 15px;
+	}
+label {
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    font-color: white,pink;
+	}
+legend{
+	border-bottom: 0px solid #e5e5e5;
+	
+
+td, th {
+    padding: 11;
+}
+}</style>
+<table>
+	<tr><span>
+		<th>First Name</th>
+		<th>Middle Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Number</th>
+		<th>Password</th></span>
+	</tr>
+	
+	{% for x in alldata  %}
+		<tr>
+			<span><td>{{x.FirstName}}</td>
+			<td>{{x.MiddleName}}</td>	
+			<td>{{x.LastName}}</td>	
+			<td>{{x.Email}}</td>	
+			<td>{{x.Number}}</td>
+			<td>{{x.Password}}</td>
+		</span></tr>
+
+	{% endfor %}	
+</table><br/><br/><br/><br/><br/>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+{% include 'template/adminfooter.html' %}	

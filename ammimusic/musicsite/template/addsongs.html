@@ -1,0 +1,84 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+
+<style>
+body{
+background: linear-gradient(red,black,white);
+    color: white;
+    font-size: 15px;
+	}
+label {
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    font-color: white,pink;
+	}
+legend{
+	border-bottom: 0px solid #e5e5e5;
+.checked {
+  color: orange;
+}
+
+}
+</style>
+
+<br/> <br/> <br/> <br/> <br/> <br/> 
+
+<div class="container" >
+<div class="row">
+<div class="col-md-6" >
+	<legend  ><B><U><I>ADD SONGS<U></I><B/></legend>
+	<form action="/addsongs/"method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+							<div class="row">
+								<div class="col-md-12 col-sm-12">
+									<div class="form-group">
+										<label for="name"><b>CATEGORY</b></label>
+										
+									</div>
+									<div class="form-group">
+										<label for="name">SONGS NAME</label>
+										<input type="text" class="form-control" id="name" name="t1" placeholder="Enter SONGS-NAME">
+									</div>
+									<div class="form-group">
+										<label for="name">SINGER NAME</label>
+										<input type="text" class="form-control" id="name" name="t2" placeholder="Enter SINGER NAME">
+									</div>
+									<div class="form-group">
+										<label for="name">TITLE</label>
+										<input type="Name" class="form-control" id="email" name="t3" placeholder="Enter TITLE">
+									</div>
+									<div class="form-group">
+										<label for="phone">BROWSER</label>
+										<input type="FILE" class="form-control" id="file" name="t4" placeholder="Select FILE">
+									</div>
+									<div class="form-group">
+										<label for="name">RATINGS</label><br/>
+										<select font color ="red" id="rating" name="t5">
+											<option value ="1">1</option>
+											<option value ="2">2</option>
+											<option value ="3">3</option>
+											<option value ="4">4</option>
+											<option value ="5">5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="name">SHOW VIEWS</label>
+										<input type="NUMBER" class="form-control" id="name" name="t6" placeholder="">
+									</div>
+								</div>
+							</div>
+		<button type="submit" ><font color="black"/>Register</button>
+	</form>
+</div>
+<div class="col-md-6">
+	
+</div>
+</div>
+
+</div>
+</body>
+
+{% include 'template/adminfooter.html' %}
+
+					
